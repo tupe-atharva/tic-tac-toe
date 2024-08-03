@@ -13,12 +13,12 @@ boxes.forEach((box)=>{
     if(turnX){ // player X's chance
     box.innerText = "X";
     turnX = false; 
-    box.style.color = "red"; 
+    box.style.color = "red"; //will add red color to X
     }
     else{ //player O's chance
     box.innerText = "O";
     turnX =true; 
-    box.style.color = "blue"; 
+    box.style.color = "blue"; //will add blue color to O
     }
     count++;
     // console.log(count);
