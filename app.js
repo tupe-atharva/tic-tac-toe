@@ -8,14 +8,17 @@ let turnX = true;
 
 let count = 0;
 boxes.forEach((box)=>{
+
    box.addEventListener("click" , ()=>{
     if(turnX){ // player X's chance
     box.innerText = "X";
-    turnX = false;  
+    turnX = false; 
+    box.style.color = "red"; 
     }
     else{ //player O's chance
     box.innerText = "O";
     turnX =true; 
+    box.style.color = "blue"; 
     }
     count++;
     // console.log(count);
