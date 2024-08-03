@@ -6,6 +6,7 @@ let msgContainer = document.querySelector(".msgContainer")
 let reset_btn = document.querySelector(".reset")
 let turnX = true;
 
+let count = 0;
 boxes.forEach((box)=>{
    box.addEventListener("click" , ()=>{
     if(turnX){ // player X's chance
@@ -16,8 +17,13 @@ boxes.forEach((box)=>{
     box.innerText = "O";
     turnX =true; 
     }
+    count++;
+    // console.log(count);
     box.disabled = true;
-    checkWinner();
+    let iswinner = checkWinner();
+    if(count==9 && !iswinner){
+        draw();
+    }
    })
 })
 
@@ -49,6 +55,7 @@ let enableBoxes = ()=>{
 
 let restartGame = ()=>{
     turnX = true;
+    count = 0;
     enableBoxes();
     msgContainer.classList.add("hide")
 }
@@ -69,12 +76,20 @@ let checkWinner = ()=>{
             if(pos1Val===pos2Val && pos2Val===pos3Val){
                showWinner(pos1Val);
             }
+            
         
         }
     }
 
 }
 
+let draw = ()=>{
+    if(count==9){
+        winnerMsg.innerText = `The game is drawn`;
+        msgContainer.classList.remove("hide");
+        reset_btn.classList.add("hide");
+    }
+}
 
 let showWinner=(value)=>{
     winnerMsg.innerText = `Congratulations, winner is ${value}`;
