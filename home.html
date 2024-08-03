@@ -3,12 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic Tac Toe</title>
+    <title>tic tac toe</title>
     <link rel="stylesheet" href="styling.css">
 </head>
 <body>
-    <h1 id="heading">Welcome to the Tic Tac Toe game</h1>
-    <script src="/app.js"></script>
-    <p>this is a demo</p>
+    <h1>Tic Tac Toe</h1>
+
+<div class="msgContainer hide">
+    <button id="newGame">New Game</button>
+    <p class="winnerMsg" >Congratulations the winner is </p>
+</div>
+
+<div id="container">
+    <div id="game">
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+    </div> 
+</div>
+
+<button class="reset">RESET GAME</button>
+ 
+<script src="app.js"></script>
 </body>
 </html>
