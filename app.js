@@ -85,7 +85,7 @@ let checkWinner = ()=>{
 
 let draw = ()=>{
     if(count==9){
-        winnerMsg.innerText = `The game is drawn`;
+        winnerMsg.innerText = `Opps:( the game is drawn`;
         msgContainer.classList.remove("hide");
         reset_btn.classList.add("hide");
     }
